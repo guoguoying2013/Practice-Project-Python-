@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 
 """
-a simple script can run and test your html rendering classes.
-
-Uncomment the steps as you add to your rendering.
+a simple script can run and test the html rendering classes.
 
 """
 
 from io import StringIO
-
-# importing the html_rendering code with a short name for easy typing.
 import html_render as hr
 
 
@@ -17,9 +13,6 @@ import html_render as hr
 def render_page(page, filename, indent=None):
     """
     render the tree of elements
-
-    This uses StringIO to render to memory, then dump to console and
-    write to file -- very handy!
     """
 
     f = StringIO()
@@ -34,7 +27,6 @@ def render_page(page, filename, indent=None):
 
 
 # Step 1
-#########
 print("\nStep1\n")
 page = hr.Element()
 
@@ -45,11 +37,9 @@ page.append("And here is another piece of text -- you should be able to add any 
 
 render_page(page, "test_html_output1.html")
 
-# The rest of the steps have been commented out.
-#  Uncomment them as you move along with the assignment.
 
-# ## Step 2
-# ##########
+
+#Step 2
 print("\nStep2\n")
 
 page = hr.Html()
@@ -65,8 +55,8 @@ page.append(body)
 
 render_page(page, "test_html_output2.html")
 
-# # Step 3
-# ##########
+#Step 3
+
 print("\nStep3\n")
 
 page = hr.Html()
@@ -86,8 +76,8 @@ page.append(body)
 
 render_page(page, "test_html_output3.html")
 
-# # Step 4
-# ##########
+#Step 4
+
 print("\nStep4\n")
 
 page = hr.Html()
@@ -107,14 +97,14 @@ page.append(body)
 
 render_page(page, "test_html_output4.html")
 
-# # Step 5
-# #########
+#Step 5
+
 print("\nStep5\n")
 
 page = hr.Html()
 
 head = hr.Head()
-head.append(hr.Title("PythonClass = Revision 1087:"))
+head.append(hr.Title("Python = Revision 1087:"))
 
 page.append(head)
 
@@ -130,14 +120,14 @@ page.append(body)
 
 render_page(page, "test_html_output5.html")
 
-# # Step 6
-# #########
+#Step 6
+
 print("\nStep6\n")
 
 page = hr.Html()
 
 head = hr.Head()
-head.append(hr.Title("PythonClass = Revision 1087:"))
+head.append(hr.Title("Python = Revision 1087:"))
 
 page.append(head)
 
@@ -157,8 +147,8 @@ page.append(body)
 
 render_page(page, "test_html_output6.html")
 
-# # Step 7
-# #########
+#Step 7
+
 print("\nStep7\n")
 
 page = hr.Html()
@@ -196,8 +186,8 @@ page.append(body)
 
 render_page(page, "test_html_output7.html")
 
-# # Step 8 and 9
-# ##############
+#Step 8 and 9
+
 print("\nstep 8 and step 9\n")
 
 page = hr.Html()
@@ -205,13 +195,13 @@ page = hr.Html()
 
 head = hr.Head()
 head.append( hr.Meta(charset="UTF-8") )
-head.append(hr.Title("PythonClass = Revision 1087:"))
+head.append(hr.Title("Python = Revision 1087:"))
 
 page.append(head)
 
 body = hr.Body()
 
-body.append( hr.H(2, "PythonClass - Example") )
+body.append( hr.H(2, "Python - Example") )
 
 body.append(hr.P("Here is a paragraph of text -- there could be more of them, "
                  "but this is enough  to show that we can do some text",
